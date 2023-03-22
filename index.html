@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imgur-hosted Image</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <style>
+        #container {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #panorama {
+            width: 600px;
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1>Panaellum Test</h1>
+        <div id="panorama">
+        </div>
+    </div>
+
+    <script>
+        pannellum.viewer('panorama', {
+            "type": "equirectangular",
+            "panorama": "https://i.ibb.co/ZVgZ9Jz/19h1n3v-a-360-image-of-boat.jpg",
+            "autoLoad": true,
+            "compass": true,
+            "northOffset": 247.5,
+            "hotSpots": [
+        {
+            "pitch": 14.1,
+            "yaw": 1.5,
+            "type": "info",
+            "text": "this is a test text",
+            "URL": "https://artbma.org/"
+        },
+        {
+            "pitch": -9.4,
+            "yaw": 222.6,
+            "type": "info",
+            "text": "test case 1"
+        },
+        {
+            "pitch": -0.9,
+            "yaw": 144.4,
+            "type": "info",
+            "text": "test case 2"
+        }
+    ]
+
+        });
+    </script>
+
+</body>
+
+</html>
